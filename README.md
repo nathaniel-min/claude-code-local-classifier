@@ -75,7 +75,7 @@ python eval/eval_holdout_full.py datasets/samples.jsonl
 ## 文档
 
 - [`docs/REPRODUCE.md`](docs/REPRODUCE.md) — 复刻指南（数据→训练→量化→部署→踩坑，含耗时和思路）
-- 📝 技术博客（Jev 思路 + 训练 + 踩坑 + 性能）：https://daily-ai-practice.vercel.app/posts/微调一个-4-b-模型当本地安全分类器/
+- 📝 技术博客（Jev 思路 + 训练 + 踩坑 + 性能）：https://daily-ai-practice.vercel.app/posts/微调一个-4b-模型当本地安全分类器/
 - 📝 选型博客（尝试史：为什么试了那么多模型）：https://daily-ai-practice.vercel.app/posts/从云端哨兵到本地分类器-为什么试了那么多模型/
 - 🤗 HuggingFace 模型（LoRA adapter + GGUF + Model Card）：https://huggingface.co/43rt/claude-code-local-classifier
 
