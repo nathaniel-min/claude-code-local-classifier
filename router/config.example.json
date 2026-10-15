@@ -1,0 +1,36 @@
+{
+  "_README": "示例配置。复制为 config.json 后填入你自己的网关 URL。Authorization 头只转发不落盘。",
+  "listen_host": "127.0.0.1",
+  "listen_port": 11940,
+  "sentinel_model": "ruvltra-classifier",
+  "sentinel_upstream": {
+    "enabled": false,
+    "url": "https://your-anthropic-gateway.example.com",
+    "model": "claude-haiku-4-5-20251001",
+    "extra_body": {}
+  },
+  "local_backend": "http://127.0.0.1:11943",
+  "local_completion": true,
+  "local_completion_threshold": 0.5,
+  "local_completion_temperature": 1.0448,
+  "local_completion_max_msgs": 2,
+  "local_completion_policy": "./policy/policy_summary.txt",
+  "local_timeout_s": 180,
+  "sentinel_timeout_s": 15,
+  "fallback_enabled": true,
+  "fallback_model": "your-fallback-model",
+  "upstreams": [
+    {
+      "prefixes": ["claude-", "gpt-5.5"],
+      "url": "https://your-anthropic-gateway.example.com"
+    },
+    {
+      "prefixes": ["glm-", "qwen", "kimi-", "tx/", "deepseek", "doubao"],
+      "url": "https://your-llm-gateway.example.com"
+    }
+  ],
+  "default_upstream": "https://your-llm-gateway.example.com",
+  "fallback_extra_body": {
+    "thinking": {"type": "disabled"}
+  }
+}

@@ -1,0 +1,23 @@
+# 模型 / 大文件
+*.gguf
+*.bin
+llama.cpp/
+.venv/
+venv/
+env/
+output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# 系统
+.DS_Store
+*.swp
+*~
+
+# 本地配置（含网关 URL/token，不入库）
+router/config.json
